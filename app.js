@@ -4,7 +4,7 @@ const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
-
+const adminRouter = require('./routes/admin');  ////////////////////////////
 const loginRouter = require('./routes/login');
 const miscRouter = require('./routes/misc');
 const { Player, Team, Charact, Item } = require('./models/models');
@@ -59,6 +59,10 @@ app.set('views', './views');
 app.set('view engine', 'hbs');
 app.use(passport.initialize());
 app.use(passport.session());
+
+//Юра ручка Админа
+
+app.use('/', adminRouter)
 
 app.use('/login', loginRouter);
 app.use('/', miscRouter);
