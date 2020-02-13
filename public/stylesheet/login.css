@@ -129,13 +129,13 @@ input {
 }
 .veen .wrapper input:focus {
   outline: none;
-  border-color: #ff4931;
+  border-color: #97cdff;
 }
 .veen > .wrapper.move {
   left: 45%;
 }
 .veen > .wrapper.move input:focus {
-  border-color: #e0b722;
+  border-color: #97cdff;
 }
 @media (max-width: 767px) {
   .veen {
@@ -171,10 +171,10 @@ input {
   }
   .splits button.active {
     opacity: 1;
-    background: #ff4931;
+    background: #97cdff;
   }
   .splits.rgstr-btn button.active {
-    background: #e0b722;
+    background: #97cdff;
   }
   .splits p {
     display: none;
