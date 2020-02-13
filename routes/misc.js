@@ -1,9 +1,13 @@
 const route = require('express').Router();
 const { Player, Team, Charact, Item } = require('../models/models');
 
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
+
+
 function protectedRoute(req, res, next) {
   if (!req.isAuthenticated()) {
-    return res.redirect('/');
+    return res.redirect('/kljlkjk');
   }
   next();
 }
@@ -15,38 +19,27 @@ route.get('/', (req, res) => {
 route.get('/account', protectedRoute, async (req, res) => {
   const player = await Player.findOne({ _id: req.user._id }).populate('charact').populate('inventory');
   const admin = await Team.findOne({ commander: player._id });
-  if (admin) res.redirect('/admin')
-  res.render('account', { player })
+  if (admin) res.redirect('/admin');
+  const players = await Team.findOne({players: player._id}).populate('players').populate('storage');
+  res.render('account', { player, players })
+});
+
+route.post('/registration', async (req, res) => {
+  const { username, password } = res.body;
+  const player = new Player({
+    login: username,
+    password: await bcrypt.hash(password, saltRounds),
+    charact: [],
+    inventory: []
+  });
+  await player.save();
+  res.redirect('/account', { username, password });
 });
 
 route.get('/logout', protectedRoute, function (req, res) {
   req.logout();
   res.redirect('/');
 });
-
-// route.post('/change', protectedRoute, async (req, res) => {
-//   const {id, value} = req.body;
-//   console.log('>>>>>', id, value);
-//   //res.redirect('/account');
-//   // const char = await Player.findOne({ _id: req.user._id }).populate('charact');
-//   // const inv = await Player.findOne({ _id: req.user._id }).populate('inventory');
-//   // , { char, inv })
-// });
-
-// route.get('/transfer', protectedRoute, (req, res) => {
-//   const { amount, username } = req.query;
-//   console.log(amount, username);
-//   const toUser = Users.find((user) => {
-//     return user.login === username;
-//   });
-//   if (!toUser) {
-//     return res.redirect('/account');
-//   }
-//   toUser.balance += +amount;
-//   req.user.balance -= +amount;
-//   console.debug(Users);
-//   res.redirect('/account');
-// });
 
 route.get(
   '/badauth',
