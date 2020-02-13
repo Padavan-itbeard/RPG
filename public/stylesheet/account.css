@@ -1,0 +1,99 @@
+body {
+  width: auto;
+}
+.container {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+li {
+  font-size: 25px;
+  color: rgb(61, 1, 61);
+  padding: 10px;
+}
+.characteristics {
+  background-color: rgba(231, 193, 250, 0.432);
+  width: 33%;
+}
+.items {
+  background-color: rgba(231, 193, 250, 0.432);
+  width: 33%;
+}
+form {
+  display: inline-flex;
+}
+h2 {
+  color: rgb(61, 1, 61);
+  padding: 5px 20px;
+}
+input {
+  width: 90px;
+  margin-right: 5px;
+  height: 37px;
+  background-color: rgb(234, 212, 255);
+  border: rgb(61, 1, 61) solid;
+  border-radius: 15px;
+}
+::placeholder {
+  color: black;
+  text-align: center;
+  font-size: 17px;
+}
+button {
+  background-color: rgb(218, 211, 255);
+  border: rgb(61, 1, 61) solid;
+  border-radius: 15px;
+  width: 90px;
+  height: 37px;
+  text-align: center;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: rgb(61, 1, 61);
+  color: rgb(218, 211, 255);
+}
+input:hover {
+  background-color: rgb(183, 157, 212);
+  color: rgb(218, 211, 255);
+}
+html {
+  background-image: url(https://i.ytimg.com/vi/W2BO-LtoMgs/maxresdefault.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.logout {
+  width: 33%;
+}
+/* @media (min-width: 736px) and (max-width: 799px) {
+  .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (min-width: 376px) and (max-width: 735px) {
+  .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  h2,
+  li,
+  ::placeholder {
+    font-size: 15px;
+  }
+}
+@media (max-width: 375px) {
+  .contsiner {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  h2,
+  li,
+  ::placeholder {
+    font-size: 1px;
+  }
+} */
