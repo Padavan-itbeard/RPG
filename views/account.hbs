@@ -2,14 +2,14 @@
 
 <ul class="changeChar">
   {{#each player.charact}}
-  <li >{{name}}
+  <li>{{name}}
     <nav class="navbar navbar-light bg-light">
-      <form  id="{{_id}}" method="POST" class="form-inline">
+      <form id="{{_id}}" method="POST" class="form-inline">
         <input class="form-control mr-sm-2" type="text" placeholder="{{value}}">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Change</button>
       </form>
     </nav>
-    </li>
+  </li>
   {{/each}}
 </ul>
 
@@ -20,4 +20,8 @@
   {{/each}}
 </ul>
 
-
+<nav class="navbar navbar-light bg-light">
+  <form method="GET" action="/logout">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">LoOut</button>
+  </form>
+</nav>

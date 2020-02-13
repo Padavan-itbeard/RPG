@@ -14,7 +14,14 @@ route.get('/', (req, res) => {
 
 route.get('/account', protectedRoute, async (req, res) => {
   const player = await Player.findOne({ _id: req.user._id }).populate('charact').populate('inventory');
-  res.render('account', { player})
+  const admin = await Team.findOne({ commander: player._id });
+  if (admin) res.redirect('/admin')
+  res.render('account', { player })
+});
+
+route.get('/logout', protectedRoute, function (req, res) {
+  req.logout();
+  res.redirect('/');
 });
 
 // route.post('/change', protectedRoute, async (req, res) => {

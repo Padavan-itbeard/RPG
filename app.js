@@ -16,7 +16,11 @@ const saltRounds = 10;
 const app = express();
 
 const mongoose = require("mongoose");
-mongoose.connect('mongodb://localhost/play', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(
+  "mongodb+srv://AtlasUser:AtlasUser@appjscluster-exfhk.mongodb.net/RVG?retryWrites=true&w=majority",
+  { useUnifiedTopology: true, useNewUrlParser: true }
+);
+//mongoose.connect('mongodb://localhost/play', { useNewUrlParser: true, useUnifiedTopology: true });
 
 passport.use(new LocalStrategy(
   function (username, password, done) {
