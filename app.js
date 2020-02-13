@@ -5,8 +5,8 @@ const FileStore = require("session-file-store")(session);
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 
-const loginRouter = require("./routes/login");
-const miscRouter = require("./routes/misc");
+const accountRouter = require("./routes/account");
+const indexRouter = require("./routes/index");
 const { Player, Team, Charact, Item } = require("./models/models");
 
 const bcrypt = require("bcrypt");
@@ -20,7 +20,7 @@ const mongoose = require("mongoose");
 //   "mongodb+srv://AtlasUser:AtlasUser@appjscluster-exfhk.mongodb.net/RVG?retryWrites=true&w=majority",
 //   { useUnifiedTopology: true, useNewUrlParser: true }
 // );
-mongoose.connect('mongodb://localhost/play', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://AtlasUser:AtlasUser@appjscluster-exfhk.mongodb.net/RVG?retryWrites=true&w=majority ', { useNewUrlParser: true, useUnifiedTopology: true });
 
 passport.use(
   new LocalStrategy(function(username, password, done) {
@@ -74,8 +74,8 @@ app.set("view engine", "hbs");
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use("/login", loginRouter);
-app.use("/", miscRouter);
+app.use("/account", accountRouter);
+app.use("/", indexRouter);
 
 // error handler
 app.use(function(err, req, res, next) {
