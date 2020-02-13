@@ -1,5 +1,5 @@
-const route = require('express').Router();
-const passport = require('passport');
+// const route = require('express').Router();
+// const passport = require('passport');
 
 // route.post(
 //   '/',
@@ -9,4 +9,4 @@ const passport = require('passport');
 //   })
 // );
 
-module.exports = route;
+// module.exports = route;
