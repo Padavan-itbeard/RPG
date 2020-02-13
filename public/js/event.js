@@ -1,7 +1,7 @@
 // document.querySelector('form').addEventListener('submit', async (event) => {
 //   event.preventDefault();
 //   console.log('id> ', event.target);
-  
+
 //   const res = await fetch("change", {
 //     credentials: 'same-origin',
 //     method: "POST",
@@ -12,7 +12,6 @@
 //   });
 //   let data = await res.json();
 // });
-
 
 // document.addEventListener('submit', async function (e) {
 
