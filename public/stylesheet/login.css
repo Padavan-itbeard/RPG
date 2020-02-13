@@ -1,0 +1,191 @@
+html {
+  background-color: rgb(217, 244, 255);
+}
+input {
+  background-color: rgb(219, 225, 252);
+}
+.body {
+  width: auto;
+  background-image: url(https://img4.goodfon.ru/wallpaper/nbig/a/c0/dragons-china-chinese-dragons-castle-house-pagoda-lok-du-xia.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.5s;
+  padding: 0;
+}
+.veen {
+  width: 70%;
+  margin: 100px auto;
+  background: rgba(255, 255, 255, 0.5);
+  min-height: 400px;
+  display: table;
+  position: relative;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+}
+.veen > div {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: rgb(82, 72, 170);
+}
+.veen button {
+  background: transparent;
+  background-image: linear-gradient(90deg, #9c9dfc, #97cdff);
+  display: inline-block;
+  padding: 10px 30px;
+  border: 3px solid #fff;
+  border-radius: 50px;
+  background-clip: padding-box;
+  position: relative;
+  color: rgb(82, 72, 170);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  transition: all 0.25s;
+}
+.veen button.dark {
+  border-color: #9c9dfc;
+  background: #9c9dfc;
+}
+.veen .move button.dark {
+  border-color: #97cdff;
+  background: #97cdff;
+}
+.veen .splits p {
+  font-size: 18px;
+}
+.veen button:active {
+  box-shadow: none;
+}
+.veen button:focus {
+  outline: none;
+}
+.veen > .wrapper {
+  position: absolute;
+  width: 40%;
+  height: 120%;
+  top: -10%;
+  left: 5%;
+  background-image: url(https://ampir.ru/upload/iblock/51c/51cf8fd6100b07004a89dcf5d815c367.jpeg);
+
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  transition: all 0.5s;
+  color: #303030;
+  overflow: hidden;
+}
+.veen .wrapper > form {
+  padding: 15px 30px 30px;
+  width: 100%;
+  transition: all 0.5s;
+  background-image: url(https://ampir.ru/upload/iblock/51c/51cf8fd6100b07004a89dcf5d815c367.jpeg);
+  width: 100%;
+}
+.veen .wrapper > form:focus {
+  outline: none;
+}
+.veen .wrapper #login {
+  padding-top: 20%;
+  visibility: visible;
+}
+.veen .wrapper #register {
+  transform: translateY(-80%) translateX(100%);
+  visibility: hidden;
+}
+.veen .wrapper.move #register {
+  transform: translateY(-80%) translateX(0%);
+  visibility: visible;
+}
+.veen .wrapper.move #login {
+  transform: translateX(-100%);
+  visibility: hidden;
+}
+.veen .wrapper > form > div {
+  position: relative;
+  margin-bottom: 15px;
+}
+.veen .wrapper label {
+  position: absolute;
+  top: -7px;
+  font-size: 12px;
+  white-space: nowrap;
+  background: rgb(255, 255, 255);
+  text-align: left;
+  left: 15px;
+  padding: 0 5px;
+  color: #999;
+  pointer-events: none;
+}
+.veen .wrapper h3 {
+  margin-bottom: 25px;
+}
+.veen .wrapper input {
+  height: 40px;
+  padding: 5px 15px;
+  width: 100%;
+  border: solid 1px #999;
+}
+.veen .wrapper input {
+  height: 40px;
+  padding: 5px 15px;
+  width: 100%;
+  border: solid 1px #999;
+}
+.veen .wrapper input:focus {
+  outline: none;
+  border-color: #ff4931;
+}
+.veen > .wrapper.move {
+  left: 45%;
+}
+.veen > .wrapper.move input:focus {
+  border-color: #e0b722;
+}
+@media (max-width: 767px) {
+  .veen {
+    padding: 5px;
+    margin: 0;
+    width: 100%;
+    display: block;
+  }
+  .veen > .wrapper {
+    position: relative;
+    height: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .veen > div {
+    display: inline-block;
+  }
+  .splits {
+    width: 50%;
+    background: #fff;
+    float: left;
+  }
+  .splits button {
+    width: 100%;
+    border-radius: 0;
+    background: #505050;
+    border: 0;
+    opacity: 0.7;
+  }
+  .splits button.active {
+    opacity: 1;
+  }
+  .splits button.active {
+    opacity: 1;
+    background: #ff4931;
+  }
+  .splits.rgstr-btn button.active {
+    background: #e0b722;
+  }
+  .splits p {
+    display: none;
+  }
+  .veen > .wrapper.move {
+    left: 0%;
+  }
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  box-shadow: inset 0 0 0 50px #fff;
+}

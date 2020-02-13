@@ -1,18 +1,17 @@
-document.querySelector('form').addEventListener('submit', async (event) => {
-  event.preventDefault();
-  console.log('id> ', event.target);
-  
-  const res = await fetch("change", {
-    credentials: 'same-origin',
-    method: "POST",
-    headers: {
-      'Content-Type': 'application/json;charset=utf-8'
-    },
-    body: JSON.stringify({ id: event.target.getAttribute(id), value: event.target.ch.value })
-  });
-  let data = await res.json();
-});
+// document.querySelector('form').addEventListener('submit', async (event) => {
+//   event.preventDefault();
+//   console.log('id> ', event.target);
 
+//   const res = await fetch("change", {
+//     credentials: 'same-origin',
+//     method: "POST",
+//     headers: {
+//       'Content-Type': 'application/json;charset=utf-8'
+//     },
+//     body: JSON.stringify({ id: event.target.getAttribute(id), value: event.target.ch.value })
+//   });
+//   let data = await res.json();
+// });
 
 // document.addEventListener('submit', async function (e) {
 
