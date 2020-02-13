@@ -19,6 +19,13 @@
   <li id="{{_id}}"> {{name}}, weight - {{weight}}</li>
   {{/each}}
 </ul>
+<h2>Инвентарь команды {{players.name}}</h2>
+<ul>
+  {{#each players.storage}}
+  <li id="{{_id}}"> {{name}}, weight - {{weight}}</li>
+  {{/each}}
+</ul>
+
 
 <nav class="navbar navbar-light bg-light">
   <form method="GET" action="/logout">
