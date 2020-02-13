@@ -7,6 +7,19 @@
       {{#each player.charact}}
       <li>{{name}}
 
+<h2>Инвентарь {{player.login}}</h2>
+<ul>
+  {{#each player.inventory}}
+  <li id="{{_id}}"> {{name}}, weight - {{weight}}</li>
+  {{/each}}
+</ul>
+<h2>Инвентарь команды {{players.name}}</h2>
+<ul>
+  {{#each players.storage}}
+  <li id="{{_id}}"> {{name}}, weight - {{weight}}</li>
+  {{/each}}
+</ul>
+
         <form id="{{_id}}" method="POST">
           <input type="text" placeholder="{{value}}">
           <button type="submit">Change</button>

@@ -1,0 +1,34 @@
+<h2>Характеристики {{player.login}}</h2>
+
+<ul class="changeChar">
+  {{#each player.charact}}
+  <li>{{name}}
+    <nav class="navbar navbar-light bg-light">
+      <form id="{{_id}}" method="POST" class="form-inline">
+        <input class="form-control mr-sm-2" type="text" placeholder="{{value}}">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Change</button>
+      </form>
+    </nav>
+  </li>
+  {{/each}}
+</ul>
+
+<h2>Инвентарь {{player.login}}</h2>
+<ul>
+  {{#each player.inventory}}
+  <li id="{{_id}}"> {{name}}, weight - {{weight}}</li>
+  {{/each}}
+</ul>
+<h2>Инвентарь команды {{players.name}}</h2>
+<ul>
+  {{#each players.storage}}
+  <li id="{{_id}}"> {{name}}, weight - {{weight}}</li>
+  {{/each}}
+</ul>
+
+
+<nav class="navbar navbar-light bg-light">
+  <form method="GET" action="/logout">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">LoOut</button>
+  </form>
+</nav>
