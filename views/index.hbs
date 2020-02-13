@@ -1,48 +1,48 @@
-<script  src="https://code.jquery.com/jquery-3.1.1.min.js"  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" ></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script defer src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script defer src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 <div class="body">
-		<div class="veen">
+  <div class="veen">
+    <div class="login-btn splits">
+      <p>Already an user?</p>
+      <button class="active">Login</button>
+    </div>
+    <div class="rgstr-btn splits">
+      <p>Don't have an account?</p>
+      <button>Register</button>
+    </div>
+    <div class="wrapper">
+      <form id="login" tabindex="500" action="/login" method="POST">
+        <h3>Login</h3>
+        <div class="mail">
+          <input type="text" name="username" placeholder="Username">
 
-			<div class="login-btn splits">
-				<p>Already an user?</p>
-				<button class="active">Login</button>
-			</div>
+        </div>
+        <div class="passwd">
+          <input type="password" name="password" placeholder="Password">
 
-			<div class="rgstr-btn splits">
-				<p>Don't have an account?</p>
-				<button>Register</button>
-			</div>
+        </div>
+        <div class="submit">
+          <button class="dark">Login</button>
+        </div>
+      </form>
+      <form id="register" tabindex="502" action="/registration" method="POST">
+        <h3>Registration</h3>
+        <div class="uid">
+          <input type="text" name="username" placeholder="Username">
 
-			<div class="wrapper">
-				<form id="login" tabindex="500" action="/login" method="POST">
-					<h3>Login</h3>
-					<div class="mail">
-						<input type="text" name="username">
-						<label>Username</label>
-					</div>
-					<div class="passwd">
-						<input type="password" name="password">
-						<label>Password</label>
-					</div>
-					<div class="submit">
-						<button class="dark">Login</button>
-					</div>
-				</form>
-				<form id="register" tabindex="502" action="/registration" method="POST">
-					<h3>Register</h3>
-					<div class="uid">
-						<input type="text" name="username">
-						<label>User Name</label>
-					</div>
-					<div class="passwd">
-						<input type="password" name="password">
-						<label>Password</label>
-					</div>
-					<div class="submit">
-						<button class="dark">Register</button>
-					</div>
-				</form>
-			</div>
-		</div>	
-	</div>
+        </div>
+        <div class="passwd">
+          <input type="password" name="password" placeholder="Password">
+
+        </div>
+        <div class="submit">
+          <button class="dark">Register</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
