@@ -10,7 +10,7 @@ async function addCh(name) {
         })
       });
       const data = await response.json();
-      // event.target.input.placeholder = data.value;
-      // console.log(data);
+      event.target.input.placeholder = data.value;
+      console.log(data);
    
 }

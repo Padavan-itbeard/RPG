@@ -19,7 +19,7 @@ const app = express();
 app.use(express.json());
 const mongoose = require("mongoose");
 mongoose.connect(
-  "mongodb+srv://AtlasUser:AtlasUser@appjscluster-exfhk.mongodb.net/RVG?retryWrites=true&w=majority",
+  "mongodb+srv://AtlasUser:AtlasUser@appjscluster-exfhk.mongodb.net/RPG?retryWrites=true&w=majority",
   { useUnifiedTopology: true, useNewUrlParser: true }
 );
 
