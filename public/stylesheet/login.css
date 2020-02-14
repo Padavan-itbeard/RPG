@@ -1,7 +1,9 @@
 html {
   background-color: rgb(217, 244, 255);
 }
-
+h3 {
+  color: rgb(61, 1, 61);
+}
 input {
   background-color: rgb(219, 225, 252);
 }

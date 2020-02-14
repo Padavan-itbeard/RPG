@@ -9,7 +9,7 @@
 .container {
   position: absolute;
   display: flex;
-  flex-direction: row;
+
   justify-content: space-between;
   width: 100%;
 }
@@ -79,7 +79,8 @@ html {
   background-size: cover;
   background-attachment: fixed;
 }
-.logoutBTN {
+.logout {
+  padding-left: 10px;
 }
 
 @media (min-width: 736px) and (max-width: 799px) {
@@ -109,7 +110,7 @@ html {
     width: 60px;
     height: 40px;
     font-size: 15px;
-    ite: column;
+
     justify-content: flex-end;
   }
 }

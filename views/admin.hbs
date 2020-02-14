@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/stylesheet/account.css">
 <div class="container">
   <div class="characteristics">
     <h2>Характеристики Капитана {{player.login}}</h2>
@@ -6,7 +7,7 @@
       <li>{{name}}
         <form id="{{_id}}" method="POST">
           <input type="text" placeholder="{{value}}">
-          <button type="submit">Change</button>
+          <button type="submit">Ok</button>
         </form>
       </li>
       {{/each}}
@@ -35,10 +36,10 @@
 
   <div class="logout">
     <form method="GET" action="/logout">
-      <button type="submit">LogOut</button>
+      <button type="submit">Logout</button>
     </form>
   </div>
-<div class="logout">
+  <div class="logout">
     <form method="GET" action="/boss/{{player._id}}">
       <button type="submit">Boss</button>
     </form>
