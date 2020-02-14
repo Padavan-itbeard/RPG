@@ -1,9 +1,19 @@
 html {
   background-color: rgb(217, 244, 255);
 }
+h3 {
+  color: rgb(61, 1, 61);
+}
 input {
   background-color: rgb(219, 225, 252);
 }
+select {
+  background-color: rgb(219, 225, 252);
+  width: 100%;
+  height: 40px;
+  margin-bottom: 25px;
+}
+
 .body {
   width: auto;
   background-image: url(https://img4.goodfon.ru/wallpaper/nbig/a/c0/dragons-china-chinese-dragons-castle-house-pagoda-lok-du-xia.jpg);
@@ -138,6 +148,12 @@ input {
   border-color: #97cdff;
 }
 @media (max-width: 767px) {
+  select {
+    height: auto;
+    width: 50px;
+    box-sizing: border-box;
+  }
+
   .veen {
     padding: 5px;
     margin: 0;

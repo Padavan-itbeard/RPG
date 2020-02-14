@@ -16,7 +16,7 @@ const saltRounds = 10;
 //password: await bcrypt.hash(password, saltRounds)
 
 const app = express();
-
+app.use(express.json());
 const mongoose = require("mongoose");
 mongoose.connect(
   "mongodb+srv://AtlasUser:AtlasUser@appjscluster-exfhk.mongodb.net/RVG?retryWrites=true&w=majority",
