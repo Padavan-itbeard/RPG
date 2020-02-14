@@ -7,6 +7,8 @@ const LocalStrategy = require("passport-local").Strategy;
 
 const accountRouter = require("./routes/account");
 const indexRouter = require("./routes/index");
+const bossRouter = require("./routes/boss");
+
 const { Player, Team, Charact, Item } = require("./models/models");
 
 const bcrypt = require("bcrypt");
@@ -75,7 +77,7 @@ app.use(passport.session());
 
 app.use("/account", accountRouter);
 app.use("/", indexRouter);
-
+app.use("/boss", bossRouter);
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
