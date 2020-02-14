@@ -18,9 +18,12 @@ route.post('/', async (req, res) => {
   
   if( await bcrypt.compare(password, player.password )) {
     const admin = await Team.findOne({ commander: player._id });
-    if(admin) res.render('admin', {player})
+    if(admin){ 
+      res.render('admin', {player})
+    }else{
     const players = await Team.findOne({players: player._id}).populate('players').populate('storage');
     res.render('account', { player})
+  }
   }
 });
 

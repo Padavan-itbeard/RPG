@@ -16,13 +16,14 @@ route.get('/', (req, res) => {
   res.render('index');
 });
 
-route.get('/admin', (req, res) => {
-  console.log(req);
+// route.get('/admin', (req, res) => {
+//   console.log(req);
   
-  // const data = await Player.findOne({ _id: username}).populate('charact').populate('inventory');
+//   // const data = await Player.findOne({ _id: username}).populate('charact').populate('inventory');
 
-  res.render('admin')
-})
+//   res.render('admin')
+// })
+
 // route.get('/account', protectedRoute, async (req, res) => {
 //   const player = await Player.findOne({ _id: req.user._id }).populate('charact').populate('inventory');
 //   const admin = await Team.findOne({ commander: player._id });
