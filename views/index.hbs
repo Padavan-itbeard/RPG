@@ -14,7 +14,7 @@
     </div>
     <div class="rgstr-btn splits">
       <p>Don't have an account?</p>
-      <button>Register</button>
+      <button>Registration</button>
     </div>
     <div class="wrapper">
       <form id="login" tabindex="500" action="/account" method="POST">
@@ -39,8 +39,18 @@
         </div>
         <div class="passwd">
           <input type="password" name="password" placeholder="Password">
-
         </div>
+        <section>
+          <h3 class="select-label">Выберите команду:</h3>
+          <select class="uid">
+            <optgroup label="Команда">
+              {{#each teams}}
+
+              <option class="uid">{{name}}</option>
+              {{/each}}
+            </optgroup>
+          </select>
+        </section>
         <div class="submit">
           <button class="dark">Register</button>
         </div>

@@ -1,12 +1,12 @@
-// const route = require('express').Router();
-// const passport = require('passport');
+const route = require("express").Router();
 
-// route.post(
-//   '/',
-//   passport.authenticate('local', {
-//     failureRedirect: '/badauth',
-//     successRedirect: '/account'
-//   })
-// );
+const { Player, Team, Charact, Item } = require("../models/models");
 
-// module.exports = route;
+route.get("/", async (req, res) => {
+  const teams = await Team.find().populate("name");
+  console.log(teams);
+
+  res.render("index", { teams });
+});
+
+module.exports = route;
