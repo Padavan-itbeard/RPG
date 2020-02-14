@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 mongoose.connect(
-  "mongodb+srv://AtlasUser:AtlasUser@appjscluster-exfhk.mongodb.net/RVG?retryWrites=true&w=majority",
+  "mongodb+srv://OlgaKiba:999333qw@cluster0-ghnbl.mongodb.net/Game",
   { useUnifiedTopology: true, useNewUrlParser: true }
 );
 

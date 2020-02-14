@@ -4,6 +4,9 @@ const session = require("express-session");
 const FileStore = require("session-file-store")(session);
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
+const ejs = require("ejs");
+const path = require("path");
+const multer = require("multer");
 
 const accountRouter = require("./routes/account");
 const indexRouter = require("./routes/index");
@@ -17,7 +20,7 @@ const app = express();
 
 const mongoose = require("mongoose");
 mongoose.connect(
-  "mongodb+srv://AtlasUser:AtlasUser@appjscluster-exfhk.mongodb.net/RVG?retryWrites=true&w=majority",
+  "mongodb+srv://OlgaKiba:999333qw@cluster0-ghnbl.mongodb.net/Game",
   { useUnifiedTopology: true, useNewUrlParser: true }
 );
 

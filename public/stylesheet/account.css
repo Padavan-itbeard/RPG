@@ -17,14 +17,16 @@ li {
 }
 .characteristics {
   background-color: rgba(231, 193, 250, 0.432);
-  width: 33%;
 }
 .items {
   background-color: rgba(231, 193, 250, 0.432);
-  width: 33%;
+}
+.teamItems {
+  background-color: rgba(231, 193, 250, 0.432);
 }
 form {
   display: inline-flex;
+  justify-content: space-between;
 }
 h2 {
   color: rgb(61, 1, 61);
@@ -34,8 +36,7 @@ input {
   width: 90px;
   margin-right: 5px;
   height: 37px;
-  background-color: rgb(234, 212, 255);
-  border: rgb(61, 1, 61) solid;
+  background-color: rgba(216, 191, 216, 0);
   border-radius: 15px;
 }
 ::placeholder {
@@ -63,16 +64,40 @@ input:hover {
 }
 html {
   background-image: url(https://i.ytimg.com/vi/W2BO-LtoMgs/maxresdefault.jpg);
-  background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 .logout {
-  width: 33%;
+  text-align: center;
 }
-/* @media (min-width: 736px) and (max-width: 799px) {
+
+@media (min-width: 736px) and (max-width: 799px) {
   .container {
     flex-wrap: wrap;
     justify-content: center;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  li {
+    font-size: 20px;
+  }
+  input {
+    width: 50px;
+    height: 27px;
+  }
+  button {
+    width: 50px;
+    height: 27px;
+    font-size: 15px;
+  }
+  ::placeholder {
+    font-size: 15px;
+  }
+  .logout {
+    width: 60px;
+    height: 40px;
+    font-size: 15px;
   }
 }
 @media (min-width: 376px) and (max-width: 735px) {
@@ -80,20 +105,56 @@ html {
     flex-wrap: wrap;
     justify-content: center;
   }
-  h2,
-  li,
-  ::placeholder {
+  h2 {
     font-size: 15px;
+  }
+  li {
+    font-size: 15px;
+  }
+  input {
+    width: 30px;
+    height: 17px;
+  }
+  button {
+    width: 30px;
+    height: 17px;
+    font-size: 10px;
+  }
+  ::placeholder {
+    font-size: 10px;
+  }
+  .logout {
+    width: 50px;
+    height: 30px;
+    font-size: 10px;
   }
 }
 @media (max-width: 375px) {
-  .contsiner {
-    flex-flow: row wrap;
+  .container {
+    flex-wrap: wrap;
     justify-content: center;
   }
-  h2,
-  li,
-  ::placeholder {
-    font-size: 1px;
+  h2 {
+    font-size: 20px;
   }
-} */
+  li {
+    font-size: 20px;
+  }
+  input {
+    width: 50px;
+    height: 27px;
+  }
+  button {
+    width: 50px;
+    height: 27px;
+    font-size: 10px;
+  }
+  ::placeholder {
+    font-size: 10px;
+  }
+  .logout {
+    width: 60px;
+    height: 40px;
+    font-size: 13px;
+  }
+}

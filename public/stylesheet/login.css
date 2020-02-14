@@ -64,7 +64,6 @@ input {
   top: -10%;
   left: 5%;
   background-image: url(https://ampir.ru/upload/iblock/51c/51cf8fd6100b07004a89dcf5d815c367.jpeg);
-
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
   transition: all 0.5s;
   color: #303030;
@@ -183,7 +182,6 @@ input {
     left: 0%;
   }
 }
-
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
