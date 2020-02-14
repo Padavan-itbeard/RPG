@@ -1,47 +1,41 @@
-<script defer src="/js/account.js"></script>
 <div class="container">
   <div class="characteristics">
-    <h2>Характеристики {{player.login}}</h2>
+    <h2>Характеристики Капитана {{player.login}}</h2>
     <ul class="changeChar">
       {{#each player.charact}}
-      <li>
-        {{name}}
+      <li>{{name}}
         <form id="{{_id}}" method="POST">
           <input type="text" placeholder="{{value}}">
-          <button type="submit">Ok</button>
+          <button type="submit">Change</button>
         </form>
-      </li> 
+      </li>
       {{/each}}
-      </table>
     </ul>
   </div>
   <div class="items">
     <h2>Инвентарь {{player.login}}</h2>
     <ul>
       {{#each player.inventory}}
-      <li id="{{_id}}"> {{name}}, weight - {{weight}}
-      </li>
+      <li id="{{_id}}"> {{name}}, weight - {{weight}}</li>
       {{/each}}
-    </ul>
-  <div class="logout">
-    <form method="GET" action="/logout">
-      <button id="{{player._id}}" class="add-del" type="submit">-</button>
-      <button id="{{player._id}}" class="add-del"type="submit">+</button>
-    </form>
-  </div>
+
   </div>
   <div class="teamItems">
     <h2>Инвентарь команды {{players.name}}</h2>
     <ul>
       {{#each players.storage}}
-      <li id="{{_id}}"> {{name}}, weight - {{weight}}
-      </li>
+      <li id="{{_id}}"> {{name}}, weight - {{weight}}</li>
+      <form id="{{_id}}" method="POST">
+        <input type="text" placeholder="{{value}}">
+        <button type="submit">Ok</button>
+      </form>
       {{/each}}
     </ul>
   </div>
+
   <div class="logout">
     <form method="GET" action="/logout">
-      <button class="logout" type="submit">Logout</button>
+      <button type="submit">LogOut</button>
     </form>
   </div>
 </div>
