@@ -15,20 +15,20 @@ route.post('/addCh', async (req, res) => {
   
   const { nameCh, nameTeam } = req.body;
   const team = await Team.findOne({ name: nameTeam });
-  team.players.forEach(async (id) => {
+  team.players.forEach(async (id, i) => {
     const pl = await Player.findById(id).populate('charact'); //.populate();
     const ch = new Charact({
       name: nameCh,
       value: 0
     });
     //pl.charact.reduce((i, obj) => {(obj[nameCh] !== un7defined) ? 1 : 0 }, 0);
-    // console.log(pl.charact);
+    console.log(`player ${i} =`, pl.charact, '\n\n\n');
     // console.log('\n\n\n\n\n\n\n\n');
-    // console.log('>>>>>>',pl.charact.filter(obj => obj["Int"])) //((i, obj) => {(obj[nameCh] !== undefined) ? 1 : 0 }, 0));
+    console.log('>>>>>>',pl.charact.filter(obj => obj["Int"])) //((i, obj) => {(obj[nameCh] !== undefined) ? 1 : 0 }, 0));
     
-    await ch.save();
-    await pl.charact.push(ch._id);
-    await pl.save();
+    // await ch.save();
+    // await pl.charact.push(ch._id);
+    // await pl.save();
   });
 });
 
